@@ -33,6 +33,33 @@
     </style>
   </head>
   <body>
+    <h1>This is my Supabase App</h1>
 
+    <section id="whenSignedOut">
+      <button id="signInBtn" class="btn btn-primary">
+        Sign In with Google
+      </button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+      <div id="userDetails"></div>
+      <button id="signOutBtn" class="btn btn-primary">
+        Sign Out
+      </button>
+    </section>
+
+    <section id="myThings" hidden="true">
+      <h2>My Things</h2>
+      <div id="myThingsList"></div>
+
+      <button id="createThing" class="btn btn-success">
+        Create a Thing
+      </button>
+    </section>
+
+    <section id="allThings">
+      <h2>All Things</h2>
+      <div id="allThingsList"></div>
+    </section>
   </body>
 </html>
