@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang=""en>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supaship</title>
     <script src="https://unpkg.com/@supabase/supabase-js"></script>
     <script src="app.js" defer></script>
@@ -33,7 +33,7 @@
     </style>
   </head>
   <body>
-    <h1>This is my Supabase App</h1>
+    <h1>Supabase App 🔥</h1>
 
     <section id="whenSignedOut">
       <button id="signInBtn" class="btn btn-primary">
@@ -43,18 +43,46 @@
 
     <section id="whenSignedIn" hidden="true">
       <div id="userDetails"></div>
-      <button id="signOutBtn" class="btn btn-primary">
-        Sign Out
-      </button>
+      <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+      <div id="askForEmail" hidden="true" class="m-5">
+        <form id="askForEmailForm">
+          <h2>Would you like to sign up for emails?</h2>
+          <div class="form-group">
+            <label for="emailInput" class="m-2">Your Email:</label>
+            <input
+              id="emailInput"
+              type="email"
+              class="form-control m-2"
+              placeholder="Email"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary m-2">Submit</button>
+        </form>
+      </div>
+
+      <div id="emailConfirmation" hidden="true">
+        <h2>You're signed up for emails!</h2>
+        <button id="cancelEmailBtn" class="btn btn-primary m-2">
+          Cancel Email
+        </button>
+      </div>
+
+      <div id="adminSendEmails" hidden="true">
+        <h2>Super Secret Admin Email Sender</h2>
+        <form id="adminEmailSender">
+          <input id="subjectInput" type="text" placeholder="Subject" class="form-control m-2" />
+          <textarea id="emailContents" class="form-control m-2"></textarea>
+          <button type="submit" class="btn btn-primary m-2">
+            Send Email
+        </form>
+      </div>
     </section>
 
     <section id="myThings" hidden="true">
       <h2>My Things</h2>
       <div id="myThingsList"></div>
 
-      <button id="createThing" class="btn btn-success">
-        Create a Thing
-      </button>
+      <button id="createThing" class="btn btn-success">Create a Thing</button>
     </section>
 
     <section id="allThings">
